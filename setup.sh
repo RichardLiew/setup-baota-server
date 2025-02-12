@@ -1,7 +1,7 @@
 USERNAME='richard'
 PASSWORD='Anebit@2019'
 PORT='9527'
-SAFE_PATH=''
+SAFE_PATH='go'
 IDC_CODE='ed8484bec'
 SSL_DISABLE='yes'
 
@@ -9,7 +9,7 @@ ADMIN_PATH='/www/server/panel/data'
 ADMIN_AUTH='admin_path.pl'
 PANEL_URL='https://download.bt.cn/install/install_panel.sh'
 
-# 如果 SAFE_PATH='/‘，或者删除那个 ADMIN_AUTH 文件，系统会默认重制为'/login'，看看怎么办
+# 当前版本的宝塔已经无法关闭安全入口了，以前的方法，比如设置 SAFE_PATH='/‘，或者删除那个 ADMIN_AUTH 文件，系统会默认重制为'/login'
 mkdir -p ${ADMIN_PATH}
 if [ -z "${SAFE_PATH}" ]; then
     SAFE_PATH='/'
