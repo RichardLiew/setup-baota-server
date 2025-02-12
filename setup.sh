@@ -9,6 +9,7 @@ ADMIN_PATH='/www/server/panel/data'
 ADMIN_AUTH='admin_path.pl'
 PANEL_URL='https://download.bt.cn/install/install_panel.sh'
 
+# 如果 SAFE_PATH='/‘，系统会默认重制为'/login'，所以，想要去除安全入口，可以直接删除那个 ADMIN_AUTH 文件
 mkdir -p ${ADMIN_PATH}
 if [ -z "${SAFE_PATH}" ]; then
     SAFE_PATH='/'
